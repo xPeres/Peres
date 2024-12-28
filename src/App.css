@@ -1,1 +1,348 @@
 
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Krona One';
+  user-select: none;
+  background-color: #373739;
+}
+
+header {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 17.5vh;
+  background-color: #19191a;
+}
+
+header .espaco {
+  display: flex;
+  position: relative;
+  width: 95%;
+  height: 100%;
+  left: 2.5%;
+  align-items: center;
+  justify-content: center;
+}
+
+header .foto {
+  display: flex;
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  left: 2.5%;
+  border-radius: 1vw;
+}
+
+header .infos {
+  display: flex;
+  position: absolute;
+  width: auto;
+  height: 10.5vh;
+  left: 11.5%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 600;
+  font-weight: 1vw;
+}
+
+header .email:hover {
+  transform: scale(1.1);
+}
+
+header .options {
+  display: flex;
+  position: absolute;
+  width: 22%;
+  height: 100%;
+  right: 2.5%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .8vw;
+}
+
+header .options2:hover {
+  transform: scale(1.2);
+  color: #5e412f;
+}
+
+.pagina {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 75vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.pagina .pro {
+  display: flex;
+  position: absolute;
+  width: 90%;
+  height: 25vw;
+  top: 5%;
+  left: 5%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagina .cards {
+  display: flex;
+  position: relative;
+  width: 30%;
+  height: 100%;
+  border-radius: 1vw;
+  background-color: #dcd7c2;
+}
+
+.pagina .tituloCards {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagina .logoCards {
+  display: flex;
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  left: 1vw;
+}
+
+.pagina .nomeLinguagem {
+  display: flex;
+  position: absolute;
+  font-weight: normal;
+  font-size: 1.2vw;
+  left: 7vw;
+  color: #5e412f;
+}
+
+.pagina .textoCards {
+  display: flex;
+  position: absolute;
+  width: 25vw;
+  height: 72.5%;
+  left: 1vw;
+  top: 6vw;
+  font-size: .9vw;
+  color: black;
+}
+
+.pagina .sobreMim {
+  display: flex;
+  position: absolute;
+  width: 90%;
+  height: 25vw;
+  left: 5%;
+  top: 28.5vw;
+}
+
+.pagina .sobreMimCard {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 90%;
+  border-radius: 1vw;
+  background-color: #dcd7c2;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagina .fotoSobreMim {
+  display: flex;
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  left: 2.5vw;
+  border-radius: 1.5vw;
+}
+
+.pagina .descSobreMim {
+  display: flex;
+  position: absolute;
+  width: 70%;
+  height: 89%;
+  right: 2.5vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagina .tituloSobreMim {
+  display: flex;
+  position: absolute;
+  color: #5e412f;
+  top: 1vw;
+  font-size: 2vw;
+  font-weight: 700;
+}
+
+.pagina .textoSobreMim {
+  display: flex;
+  position: absolute;
+  color: black;
+  font-size: .9vw;
+}
+
+.pagina .formacao {
+  display: flex;
+  position: absolute;
+  width: 90%;
+  height: 25vw;
+  left: 5%;
+  top: 50vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagina .formacaCard {
+  display: flex;
+  position: relative;
+  width: 47.5%;
+  height: 80%;
+  border-radius: 1vw;
+  background-color: #dcd7c2;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pagina .tituloFormacao {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 0vw;
+  align-items: center;
+}
+
+.pagina .fotoFormacao {
+  display: flex;
+  position: relative;
+  width: 5vw;
+  height: 5vw;
+  left: 1vw;
+  margin-right: 4vw;
+}
+
+.pagina .tituloText {
+  display: flex;
+  position: relative;
+  font-size: 2vw;
+  color: #5e412f;
+}
+
+.pagina .textoFormacao {
+  display: flex;
+  position: absolute;
+  top: 6.5vw;
+  width: 90%;
+  height: 65%;
+  color: black;
+}
+
+.pagina .projetos {
+  display: flex;
+  position: absolute;
+  width: 90%;
+  height: 37vw;
+  left: 5%;
+  top: 74vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagina .tituloProjeto {
+  display: flex;
+  position: absolute;
+  top: 1vw;
+  font-size: 2vw;
+  color: #5e412f;
+}
+
+.pagina .textoProjeto {
+  display: flex;
+  position: absolute;
+  top: 4.5vw;
+  width: 80%;
+  font-size: .9vw;
+}
+
+.pagina .videoProjeto {
+  display: flex;
+  position: relative;
+  top: 7vw;
+}
+
+.pagina .projetosCard {
+  display: flex;
+  position: relative;
+  width: 47.5%;
+  height: 95%;
+  border-radius: 1vw;
+  background-color: #dcd7c2;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  top: -1vw;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 7.5vh;
+  background-color: #19191a;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .redes {
+  display: flex;
+  position: absolute;
+  width: 40vw;
+  left: 2.5vw;
+  height: 2vw;
+}
+
+footer .textos {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .textos:hover {
+  transform: scale(1.1);
+}
+
+footer .Linguagens {
+  display: flex;
+  position: absolute;
+  width: 10vw;
+  right: 2.5vw;
+  height: 2vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .fotoRedes {
+  display: flex;
+  position: relative;
+  width: 2vw;
+  height: 2vw;
+  margin-right: .1vw;
+}
+
+footer .fotoLinguagens {
+  display: flex;
+  position: relative;
+  width: 2vw;
+  height: 2vw;
+}

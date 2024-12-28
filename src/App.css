@@ -29,8 +29,8 @@
   header .foto {
     display: flex;
     position: absolute;
-    width: 7.5vw;
-    height: 7.5vw;
+    width: 15vw;
+    height: 15vw;
     left: 2.5%;
     border-radius: 1vw;
   }
@@ -40,10 +40,11 @@
     position: absolute;
     width: auto;
     height: 10.5vh;
-    left: 11.5%;
+    left: 19.5%;
+    top: 35%;
     flex-wrap: wrap;
     flex-direction: column;
-    font-size: 1vw;
+    font-size: 1.8vw;
   }
   
   header .email:hover {
@@ -53,12 +54,12 @@
   header .options {
     display: flex;
     position: absolute;
-    width: 50%;
+    width: 45%;
     height: 100%;
     right: 2.5%;
     align-items: center;
     justify-content: space-between;
-    font-size: 2vw;
+    font-size: 1.8vw;
   }
   
   header .options2:hover {
@@ -193,7 +194,7 @@
     display: flex;
     position: absolute;
     width: 90%;
-    height: 80vw;
+    height: 85vw;
     left: 5%;
     top: 120.5vw;
     align-items: center;
@@ -251,9 +252,9 @@
     display: flex;
     position: absolute;
     width: 90%;
-    height: 80vw;
+    height: 85vw;
     left: 5%;
-    top: 195.5vw;
+    top: 199.5vw;
     align-items: center;
     justify-content: space-between;
   }
@@ -278,7 +279,7 @@
     display: flex;
     position: relative;
     top: 20vw;
-    transform: scale(0.25);
+    transform: scale(0.23);
   }
   
   .pagina .projetosCard {
@@ -307,7 +308,7 @@
   footer .redes {
     display: flex;
     position: absolute;
-    width: 40vw;
+    width: 60vw;
     left: 2.5vw;
     height: 2vw;
   }
@@ -329,7 +330,7 @@
   footer .Linguagens {
     display: flex;
     position: absolute;
-    width: 10vw;
+    width: 12vw;
     right: 2.5vw;
     height: 2vw;
     align-items: center;

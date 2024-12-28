@@ -6,6 +6,7 @@ import js from './assets/js.png'
 import html from './assets/html.png'
 import css from './assets/css.png'
 import insta from './assets/insta.png'
+import react from './assets/react.png'
 import linkeding from './assets/linkedin.png'
 import discord from './assets/discord.png'
 import youtube from './assets/youtube.png'
@@ -80,7 +81,7 @@ function App() {
           </div>
           <div className='cards'>
           <div className='tituloCards'>
-              <img className='logoCards' src={lua} alt=""/>
+              <img className='logoCards' src={react} alt=""/>
               <div className='nomeLinguagem'>Bibioteca React</div>
             </div>
 

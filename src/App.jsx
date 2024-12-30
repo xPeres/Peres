@@ -6,7 +6,6 @@ import js from './assets/js.png'
 import html from './assets/html.png'
 import css from './assets/css.png'
 import insta from './assets/insta.png'
-import react from './assets/react.png'
 import linkeding from './assets/linkedin.png'
 import discord from './assets/discord.png'
 import youtube from './assets/youtube.png'
@@ -66,7 +65,7 @@ function App() {
             </div>
 
             <div className='textoCards'>
-              A Linguagem Lua aprendi a mais de 3 anos. Utilizo ela para programar Scripts para cidades de FIVEM ou GTA RolePlay, com isso adquiri experiências de lógica de programação, além de habilidades para programar em Lua. Realizo serviços para cidades de FIVEM à 2 anos, criando diversos scripts sendo Lua Back-End e de interface utilizo html, css e javascript. Tenho um amplo conhecimento de lua aplicavel dentro do FIVEM e também um conhecimento de programação Lua fora do FIVEM.
+              A Linguagem Lua aprendi a mais de 3 anos. Utilizo ela para programar Scripts para cidades de FIVEM ou GTA RolePlay, com isso adquiri experiências de lógica de programação além de habilidades para programar em Lua. Realizo serviços para cidadesd de FIVEM à 2 anos, criando diversos scripts sendo Lua Back-End e de interface utilizo html, css e javascript. Tenho um amplo conhecimento de lua aplicavel dentro do FIVEM e também um conhecimento de programação Lua fora do FIVEM.
             </div>
           </div>
           <div className='cards'>
@@ -76,12 +75,12 @@ function App() {
             </div>
 
             <div className='textoCards'>
-              A Linguagem JavaScript aprendi à mais de 1 ano atrás. Utilizo ela para a criação da lógica e integração dos sistemas do html, como troca de abas e inserção de dados vindo da back-end. Um dos projetos realizados com javascript foi a criação front-end para o FIVEM como sistema de inventário (mochila) do jogador, com draggable para movimentação de itens e também utilizo para requisitar e receber informações da back-end para alterar a front-end para cada pessoa conforme o que ela possui pelos metodos post.
+              A Linguagem JavaScript aprendi à mais de 1 ano atrás. Utilizo ela para a criação da lógica e integração dos sistemas do html, como troca de abas e inserção de dados vindo da back-end. Alguns dos projetos realizados com javascript foi a criação front-end para o FIVEM como sistema de inventário (mochila) do jogador com draggable para movimentação de itens e também utilizo para requisitar e receber informações da back-end para alterar a front-end para cada pessoa conforme o que ela possui pelos metodos post.
             </div>
           </div>
           <div className='cards'>
           <div className='tituloCards'>
-              <img className='logoCards' src={react} alt=""/>
+              <img className='logoCards' src={lua} alt=""/>
               <div className='nomeLinguagem'>Bibioteca React</div>
             </div>
 

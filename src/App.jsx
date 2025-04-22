@@ -44,8 +44,8 @@ function App() {
 
   return (
     <>
-    <div className={white ? 'light' : 'dark'} ref={inicio}>
-        <div className='absolute bg-[#1A1A1A] light:bg-[#E0E8F6] w-screen h-screen top-0 bottom-0 lef-0 right-0 m-auto overflow-x-hidden overflow-y-auto'>
+    <div className={white ? 'light' : 'dark'}>
+        <div className='absolute bg-[#1A1A1A] light:bg-[#E0E8F6] w-screen h-screen top-0 bottom-0 lef-0 right-0 m-auto overflow-x-hidden overflow-y-auto' >
           <header className='flex fixed w-full h-15 top-10'>
             <div className='flex absolute w-[80%] md:w-[60%] left-[5%] md:left-[10%] h-15 items-center justify-between text-[#C1C1C1] light:text-[#050505]'>
               {white ? <><img className='w-10 md:w-15 lg:w-20' src={peres2} alt="" /></> : <><img className='w-10 md:w-15 lg:w-20' src={peres} alt="" /></>}
@@ -63,8 +63,10 @@ function App() {
             }
           </header>
 
+          <div ref={inicio}></div>
+          
           <main>
-            <div className='flex relative w-full h-auto top-120 items-center justify-center'>
+            <div className='flex relative w-full h-auto top-100 lg:top-120 items-center justify-center'>
               {white ? <></>:<><img className='absolute bottom-35 md:bottom-37 lg:top-[-150%] w-auto md:w-[50%] lg:w-auto' src={fundo} alt="" /></>}
               <img className='relative bottom-65 md:bottom-50 lg:bottom-50 w-30 md:w-50 lg:w-50 rounded-full' src={pessoa} alt="" />
               <div className='absolute bottom-55 md:bottom-30 lg:bottom-30 text-[#FFFFFF] text-[6vw] lg:text-[3vw] light:text-[#484E53]'>Fabrício Peres</div>
@@ -72,7 +74,7 @@ function App() {
               <h2 className='absolute w-[90vw] md:w-[50vw] lg:w-[35vw] text-white bottom-30 md:top-35 text-xs md:text-base lg:text-lg light:text-[#484E53]'>Sou um Estudante de Desenvolvedor Full-Stack. Atualmente estudo React (JS e TS) e posteriormente irei me aprofundar em Next. Utilizo NodeJS (Express) para a criação de códigos back-end e criação de APIs</h2>
             </div>
 
-            <div className='flex relative w-full h-auto top-40 md:top-100 lg:top-140 items-center justify-center' ref={sobre}>
+            <div className='flex relative w-full h-auto top-40 md:top-100 lg:top-150 items-center justify-center' ref={sobre}>
               <div className='absolute md:top-25 lg:top-25 text-[#FFFFFF] light:text-[#2B2B2B] text-[6vw] lg:text-[3vw]'>Sobre Mim</div>
               <div className='absolute top-42 lg:top-47 text-[3vw] lg:text-[1.2vw] text-transparent bg-clip-text bg-gradient-to-r from-[#4FC3F7] to-[#FFFFFF] light:to-[#484E53]'>Conheça-me</div>
               <h2 className='relative top-55 md:top-55 lg:top-60 text-white w-[90%] lg:w-[50%] text-xs lg:text-lg light:text-[#1C1E53] '>Me chamo Fabrício Peres e atualmente estou estudando Ciências da Computação pela Universidade São Judas Tadeu, que irei finalizar ao fim deste ano.

@@ -1,161 +1,141 @@
-import React, { useRef } from "react";
-import YouTube from "react-youtube";
-import foto from './assets/foto.jpg'
-import lua from './assets/lua.svg'
-import js from './assets/js.png'
-import html from './assets/html.png'
-import css from './assets/css.png'
-import insta from './assets/insta.png'
-import linkeding from './assets/linkedin.png'
-import discord from './assets/discord.png'
-import youtube from './assets/youtube.png'
-import colegio from './assets/star.png'
-import faculdade from './assets/faculdade.png'
 import './App.css'
+import peres from './assets/Peres.svg'
+import noite from './assets/Noite.svg'
+import dia from './assets/Dia.svg'
+import fundo from './assets/Fundo.svg'
+import pessoa from './assets/Eu.jpg'
+import peres2 from './assets/Peres2.svg'
+import exp1 from './assets/Exp1.svg'
+import exp2 from './assets/Exp2.svg'
+import exp3 from './assets/Exp3.svg'
+import exp4 from './assets/Exp4.svg'
+import skillz from './assets/Skillz.svg'
+import inv from './assets/Inventario.svg'
+import cal from './assets/Calculadora.svg'
+import acess from './assets/send.svg'
+import email from './assets/Email.svg'
+import linkedin from './assets/Linkedin.svg'
+import site from './assets/Site.svg'
+import insta from './assets/Insta.svg'
+import linkedin2 from './assets/Linkedin2.svg'
+import site2 from './assets/Site2.svg'
+import insta2 from './assets/Insta2.svg'
+import { useRef, useState } from 'react'
 
 function App() {
-  const openInNewTab = (url) => {
+  const openInNewTab = (url: string) => {
     window.open(url, "_blank", "noreferrer");
   };
 
-  const inicio = useRef(null);
-  const sobre = useRef(null);
-  const formacao = useRef(null);
-  const projetos = useRef(null);
+  const copiar = () => {
+    navigator.clipboard.writeText('fabricioperesdsantos@gmail.com');
+  };
 
-  const scrollToSection = (sectionRef) => {
+  const inicio = useRef(null)
+  const sobre = useRef(null)
+  const projetos = useRef(null)
+  const scrollToSection = (sectionRef: any) => {
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const [white, setWhite] = useState(false)
+
+  const theme = () => setWhite(!white)
+
   return (
     <>
-      <header>
-        <div className='espaco'>
-          <img className='foto' src={foto} alt="" />
-          <div className='infos'>
-            <div>Fabrício Peres</div>
-            <div>20 Anos</div>
-            <div>Osasco - SP</div>
-            <div className='email' onClick={() => openInNewTab("https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqTfrJdcqWjtDQmppDpcGPwrxVnblVSWlDClZJMFSbSDxQSXlHNFztZpzzqkhqxdrKqLNB")}>fabricioperesdsantos@gmail.com</div>
-          </div>
-        </div>
+    <div className={white ? 'light' : 'dark'} ref={inicio}>
+        <div className='absolute bg-[#1A1A1A] light:bg-[#E0E8F6] w-screen h-screen top-0 bottom-0 lef-0 right-0 m-auto overflow-x-hidden overflow-y-auto'>
+          <header className='flex fixed w-full h-15 top-10'>
+            <div className='flex absolute w-[80%] md:w-[60%] left-[5%] md:left-[10%] h-15 items-center justify-between text-[#C1C1C1] light:text-[#050505]'>
+              {white ? <><img className='w-10 md:w-15 lg:w-20' src={peres2} alt="" /></> : <><img className='w-10 md:w-15 lg:w-20' src={peres} alt="" /></>}
+              <div className='flex relative w-1/2 md:w-1/2 lg:w-1/3 items-center justify-between text-base'>
+                <div className='text-xs md:text-base lg:text-lg hover:scale-105' onClick={() => scrollToSection(inicio)}>Ínicio</div>
+                <div className='text-xs md:text-base lg:text-lg hover:scale-105' onClick={() => scrollToSection(sobre)}>Sobre Mim</div>
+                <div className='text-xs md:text-base lg:text-lg hover:scale-105' onClick={() => scrollToSection(projetos)}>Projetos</div>
+              </div>
+              <div className='flex relative w-15 md:w-30 lg:w-30 h-5 md:h-10 lg:h-10 text-[2vw] md:text-xs lg:text-lg  border-1 border-[#4FC3F7] light:border-[#050505] rounded-md items-center justify-center text-[#FFFFFF] light:text-[#050505] hover:scale-105' onClick={() => openInNewTab("https://www.linkedin.com/in/devperes")}>Contato</div>
+            </div>
+            {white ? 
+              <><img onClick={theme} className='relative left-[90%] md:left-[80%] w-5 md:w-10 lg:w-10 hover:scale-105' src={dia} alt="" /></> 
+              : 
+              <><img onClick={theme} className='relative left-[90%] md:left-[80%] w-5 md:w-10 lg:w-10 hover:scale-105' src={noite} alt="" /></>
+            }
+          </header>
 
-        <div className="options">
-          <div className="options2">
-            <div onClick={() => scrollToSection(inicio)}>Inicio</div>
-          </div>
-          <div className="options2">
-            <div onClick={() => scrollToSection(sobre)}>Sobre mim</div>
-          </div>
-          <div className="options2">
-            <div onClick={() => scrollToSection(formacao)}>Formação</div>
-          </div>
-          <div className="options2">
-            <div onClick={() => scrollToSection(projetos)}>Projetos</div>
-          </div>
-        </div>
-      </header>
-
-      <div className='pagina'>
-        <div className='pro' ref={inicio}>
-          <div className='cards'>
-            <div className='tituloCards'>
-              <img className='logoCards' src={lua} alt=""/>
-              <div className='nomeLinguagem'>Lingaguem Lua</div>
+          <main>
+            <div className='flex relative w-full h-auto top-120 items-center justify-center'>
+              {white ? <></>:<><img className='absolute bottom-35 md:bottom-37 lg:top-[-150%] w-auto md:w-[50%] lg:w-auto' src={fundo} alt="" /></>}
+              <img className='relative bottom-65 md:bottom-50 lg:bottom-50 w-30 md:w-50 lg:w-50 rounded-full' src={pessoa} alt="" />
+              <div className='absolute bottom-55 md:bottom-30 lg:bottom-30 text-[#FFFFFF] text-[6vw] lg:text-[3vw] light:text-[#484E53]'>Fabrício Peres</div>
+              <div className='absolute bottom-52 md:bottom-24 lg:bottom-25 text-[3vw] lg:text-[1.2vw] text-transparent bg-clip-text bg-gradient-to-r from-[#4FC3F7] to-[#FFFFFF] light:to-[#484E53]'>Estudante Full-Stack <span className='text-[#FFFFFF]'>🧙‍♂️</span></div>
+              <h2 className='absolute w-[90vw] md:w-[50vw] lg:w-[35vw] text-white bottom-30 md:top-35 text-xs md:text-base lg:text-lg light:text-[#484E53]'>Sou um Estudante de Desenvolvedor Full-Stack. Atualmente estudo React (JS e TS) e posteriormente irei me aprofundar em Next. Utilizo NodeJS (Express) para a criação de códigos back-end e criação de APIs</h2>
             </div>
 
-            <div className='textoCards'>
-              A Linguagem Lua aprendi a mais de 3 anos. Utilizo ela para programar Scripts para cidades de FIVEM ou GTA RolePlay, com isso adquiri experiências de lógica de programação além de habilidades para programar em Lua. Realizo serviços para cidadesd de FIVEM à 2 anos, criando diversos scripts sendo Lua Back-End e de interface utilizo html, css e javascript. Tenho um amplo conhecimento de lua aplicavel dentro do FIVEM e também um conhecimento de programação Lua fora do FIVEM.
-            </div>
-          </div>
-          <div className='cards'>
-          <div className='tituloCards'>
-              <img className='logoCards' src={js} alt=""/>
-              <div className='nomeLinguagem'>Lingaguem Javascript</div>
-            </div>
-
-            <div className='textoCards'>
-              A Linguagem JavaScript aprendi à mais de 1 ano atrás. Utilizo ela para a criação da lógica e integração dos sistemas do html, como troca de abas e inserção de dados vindo da back-end. Alguns dos projetos realizados com javascript foi a criação front-end para o FIVEM como sistema de inventário (mochila) do jogador com draggable para movimentação de itens e também utilizo para requisitar e receber informações da back-end para alterar a front-end para cada pessoa conforme o que ela possui pelos metodos post.
-            </div>
-          </div>
-          <div className='cards'>
-          <div className='tituloCards'>
-              <img className='logoCards' src={lua} alt=""/>
-              <div className='nomeLinguagem'>Bibioteca React</div>
+            <div className='flex relative w-full h-auto top-40 md:top-100 lg:top-140 items-center justify-center' ref={sobre}>
+              <div className='absolute md:top-25 lg:top-25 text-[#FFFFFF] light:text-[#2B2B2B] text-[6vw] lg:text-[3vw]'>Sobre Mim</div>
+              <div className='absolute top-42 lg:top-47 text-[3vw] lg:text-[1.2vw] text-transparent bg-clip-text bg-gradient-to-r from-[#4FC3F7] to-[#FFFFFF] light:to-[#484E53]'>Conheça-me</div>
+              <h2 className='relative top-55 md:top-55 lg:top-60 text-white w-[90%] lg:w-[50%] text-xs lg:text-lg light:text-[#1C1E53] '>Me chamo Fabrício Peres e atualmente estou estudando Ciências da Computação pela Universidade São Judas Tadeu, que irei finalizar ao fim deste ano.
+                Meus estudos com programação começaram em 2021 com o jogo FIVEM, estudando programação LUA e com isso no ano de 2023 iniciei os estudos para criação de interfaces tanto web quanto para o FIVEM. Aprendi HTML, Css e JavaScript puro e a 1 Ano estou utilizando a biblioteca React para a criação de interfaces mais interativas e com desempenho melhor. <br /> <br />
+                Com meus estudos também utilizo além do React e Lua, o NodeJS, mais especificamente o Expres.js para a criação da parte da back-end de alguns serviços. Atualmente desenvolvo mais APIs para alguns sistemas que crio para aprendizagem. Algumas das APIs criadas foram requisitar dados do MySQL, inserir dados, editar dados e remover dados. Algumas das APIs criadas foram para sistema de criação de contas e login e com isso utilizei o “bcrypt” para criptografar as senhas e deixar elas mais protegidas no banco de dados.
+              </h2>
             </div>
 
-            <div className='textoCards'>
-              A Biblioteca do React é um dos meus novos estudos sendo realizados. Utilizando ele a mais de 1 mês, aprendi com ele a facilidade e rapidez para criação de front-end. Utilizei o mesmo para a criação de um site de demonstração de produtos e também a criação deste site. Estou iniciando estudos para a utilização dele com uma back-end para utilização de banco de dados para criação de um sistema de loja com criação e adição de itens, adição de estoque, verificação do estoque e compra do item.
-            </div>
-          </div>
-        </div>
-
-        <div className='sobreMim' ref={sobre}>
-          <div className='sobreMimCard'>
-            <img className='fotoSobreMim' src={foto} alt="" />
-            <div className='descSobreMim'>
-              <div className='tituloSobreMim'>Sobre Mim</div>
-              <div className='textoSobreMim'>Com experiência em atendimento ao cliente virtual desde os 15 anos, desenvolvi fortes habilidades de comunicação e resolução de problemas. Aos 17 anos, iniciei minha jornada na programação, especializando-me em Lua, JavaScript e SQL. Atualmente, trabalho como programador freelancer, utilizando essas linguagens para desenvolver soluções personalizadas. Também possuo conhecimentos em Python e Java, embora minha experiência prática seja maior em Lua, JavaScript e SQL. Ao longo de 2 anos de atuação profissional, adquiri sólida experiência em desenvolvimento de sistemas e gestão de bancos de dados.</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="formacao" ref={formacao}>
-          <div className="formacaCard" onClick={() => openInNewTab("https://www.colegiostarmax.com.br")}>
-            <div className="tituloFormacao">
-              <img className="fotoFormacao" src={colegio} alt="" />
-              <div className="tituloText">Ensino Médio</div>
+            <div className='flex relative w-full h-auto top-120 md:top-200 lg:top-280 items-center justify-center'>
+              <div className='absolute text-[#FFFFFF] light:text-[#2B2B2B] text-[6vw] lg:text-[3vw]'>Portfólio</div>
+              <div className='absolute top-4 md:top-6 lg:top-10 text-[3vw] lg:text-[1.2vw] text-transparent bg-clip-text bg-gradient-to-r from-[#4FC3F7] to-[#FFFFFF] light:to-[#484E53]'>Sistemas que Utilizo!</div>
+              <img className='absolute top-15 md:top-30 lg:top-40' src={white ? exp3 : exp1} alt="" />
+              <img className='absolute top-60 md:top-95 lg:top-120' src={white ? exp4 : exp2} alt="" />
             </div>
 
-            <div className="textoFormacao">Com ínicio no ano de 2019, estudei o ensino médio no colégio star max, que estudei do 1° ano ao 3° ano. Finalizei os estudos no colégio star max em 2021. Dentro do raking das escolas de Osasco, ela esta em 4° lugar e também foi 2° lugar no ranking. Com ensino focado para FUVEST, ela possui uma taxa alta de aprovação dos seus alunos em faculdades.</div>
-          </div>
-          <div className="formacaCard" onClick={() => openInNewTab("https://www.usjt.br")}>
-            <div className="tituloFormacao">
-              <img className="fotoFormacao" src={faculdade} alt="" />
-              <div className="tituloText">Ensino Superior</div>
+            <div className='flex relative w-full h-auto top-220 md:top-400 lg:top-500 items-center justify-center' ref={projetos}>
+              <div className='absolute bottom-85 text-[#FFFFFF] light:text-[#2B2B2B] text-[6vw] lg:text-[3vw]'>Projetos</div>
+              <div className='absolute top-15 text-[3vw] lg:text-[1.2vw] text-transparent bg-clip-text bg-gradient-to-r from-[#4FC3F7] to-[#FFFFFF] light:to-[#484E53]'>Alguns dos meus Projetos!</div>
+              <div className='relative h-100 w-300 top-30 items-center justify-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-4'>
+                <div className='text-left'>
+                  <img className='flex relative bottom-5 w-full' src={skillz} alt="" />
+                  <div className='relative text-[#C1C1C1] bottom-2 text-[5vw] md:text-[4vw] lg:text-[1vw] light:text-[#484E53]'>Skillz</div>
+                  <div className='flex relative items-center justify-between w-full'>
+                    <div className='relative text-[#A9A9A9] text-[3vw] md:text-[2vw] lg:text-[.7vw] w-[40vw] md:w-[30vw] lg:w-[11vw] light:text-[#484E53]'>Pequeno site com front-end e back-end para registro de serviços</div>
+                    <img className='relative hover:scale-110' onClick={() => openInNewTab("https://github.com/xPeres/Sistema-de-Divulga-o-de-Empresas")} src={acess} alt="" />
+                  </div>
+                </div>
+                <div className='text-left'>
+                  <img className='flex relative bottom-5 w-full' src={inv} alt="" />
+                  <div className='relative text-[#C1C1C1] bottom-2 text-[5vw] md:text-[4vw] lg:text-[1vw] light:text-[#484E53]'>Inventário</div>
+                  <div className='flex relative items-center justify-between w-full'>
+                    <div className='relative text-[#A9A9A9] text-[3vw] md:text-[2vw] lg:text-[.7vw] w-[40vw] md:w-[30vw] lg:w-[11vw] light:text-[#484E53]'>Sistema de Inventário para FIVEM que utiliza Drag UI.</div>
+                    <img className='relative hover:scale-110' onClick={() => openInNewTab("https://youtu.be/F0nvAkWIkDY")} src={acess} alt="" />
+                  </div>
+                </div>
+                <div className='text-left'>
+                  <img className='flex relative bottom-5 w-full' src={cal} alt="" />
+                  <div className='relative text-[#C1C1C1] bottom-2 text-[5vw] md:text-[4vw] lg:text-[1vw] light:text-[#484E53]'>Calculadora</div>
+                  <div className='flex relative items-center justify-between w-full'>
+                    <div className='relative text-[#A9A9A9] text-[3vw] md:text-[2vw] lg:text-[.7vw] w-[40vw] md:w-[30vw] lg:w-[11vw] light:text-[#484E53]'>Sistema de Calculadora simples com sistema de troca de cores.</div>
+                    <img className='relative hover:scale-110' onClick={() => openInNewTab("https://github.com/xPeres/Calculadora")} src={acess} alt="" />
+                  </div>
+                </div>
+              </div>
             </div>
+          </main>
 
-            <div className="textoFormacao">Com ínicio no ano de 2022 e finalização em 2025, estudei matérias como: Modelagem de Software, Analise de Dados e Big Data, Inteligencia Artificial, Gestão e Qualidade de Software, Modelos, Métodos e Técnicas da engenharia de Software entre outras. Com isso aprendi lógica de programação tanto em java quanto em python. Aprendi a criação utilizando o banco de MySQL, criação das tabelas e como utiliza-lás. Também aprendi como devemos iniciar e desenvolver um software, seguindo o padrão para que o software saia o melhor possível e com a menor quantidade de bugs possíveis.</div>
-          </div>
-        </div>
-
-        <div className="projetos" ref={projetos}>
-          <div className="projetosCard">
-            <div className="tituloProjeto">Inventário</div>
-            <div className="textoProjeto">Sistema de Inventário criado para visualização dos itens dos jogadores. É requisitado via post para a back-end (lua) os itens do jogador e posteriormente pelo javascript, ocorre a adição de uma linha no html com as informações recebida. Também é Utilizado draggable para que o jogador possa visualizar quando estiver mexendo com o item.</div>
-            <YouTube className="videoProjeto" videoId={"F0nvAkWIkDY"} />
-          </div>
-          <div className="projetosCard">
-          <div className="tituloProjeto">Tablet Policial</div>
-            <div className="textoProjeto">Sistema de Tablet Policial criado para facilitar os oficiais em suas ações. No sistema utiliza Multi Select onde é possível escolher mais de uma opção como os oficiais envolvidos, podendo deixar mais completo as escolhas e mais ageis. Também possui sistema básico de crop em área definida, que será melhorado para que o usuário possa editar o tamanho.</div>
-            <YouTube className="videoProjeto" videoId={"tprUTCMIjB8"} />
-          </div>
+          <footer className='flex relative w-full h-35 md:h-25 lg:h-25 top-[420vw] md:top-520 lg:top-550 border-t border-[#484E53]'>
+            <div className='flex relative items-center justify-between w-[90%] lg:w-[80%] left-[5%] lg:left-[10%]'>
+              <div className='text-[1.5vw] md:text-[1.5vw] lg:text-[1.2vw] text-[#A9A9A9] light:text-[#282938] top-10'>© 2025 todos os direitos reservados</div>
+              <div className='flex top-9 md:top-8 lg:top-[1.5vw] w-35 md:w-60 lg:w-[20vw] h-7 md:h-10 lg:h-[2.5vw] border-1 rounded border-[#484E53] items-center justify-center'>
+                <img className='w-[4vw] md:w-[2vw] lg:w-[2vw]' src={email} alt="" />
+                <div className='text-[#C9C9C9] light:text-[#484E53] text-[1.5vw] md:text-[1.5vw] lg:text-[1vw]' onClick={copiar}>fabricioperesdsantos@gmail.com</div>
+              </div>
+              <div className='flex top-20 md:top-8 lg:top-[2.1vw] items-center justify-between w-40 md:w-40 lg:w-80'>
+                <img src={white ? linkedin2 : linkedin} onClick={() => openInNewTab("https://www.linkedin.com/in/devperes")} alt="" />
+                <img src={white ? site2 : site} onClick={() => openInNewTab("https://discord.gg/maze-store-2k-937899788735746129")} alt="" />
+                <img src={white ? insta2 : insta} onClick={() => openInNewTab("https://www.instagram.com/fah.peres/")} alt="" />
+              </div>
+            </div>
+          </footer>
         </div>
       </div>
-      
-      <footer>
-        <div className='redes'>
-          <div className='textos' onClick={() => openInNewTab("https://www.instagram.com/fah.peres/")}> 
-            <img className='fotoRedes' src={insta} alt=""/> <div>Instagram</div>
-          </div>
-          <div className='textos' onClick={() => openInNewTab("www.linkedin.com/in/devperes")}>
-            <img className='fotoRedes' src={linkeding} alt=""/><div>Linkedin</div>
-          </div>
-          <div className='textos' onClick={() => openInNewTab("https://discord.gg/maze-store-2k-937899788735746129")}>
-            <img className='fotoRedes' src={discord} alt=""/><div>#PeresDev</div>
-          </div>
-          <div className='textos' onClick={() => openInNewTab("https://www.youtube.com/channel/UCE1aRatx6tBbKGN7oO2F8qw")}>
-            <img className='fotoRedes' src={youtube} alt=""/><div>Youtube</div>
-          </div>
-        </div>
-
-        <div className='Linguagens'>
-          <img className='fotoLinguagens' src={lua} alt="" />
-          <img className='fotoLinguagens' src={js} alt="" />
-          <img className='fotoLinguagens' src={html} alt="" />
-          <img className='fotoLinguagens' src={css} alt="" />
-        </div>
-      </footer>
     </>
   )
 }
